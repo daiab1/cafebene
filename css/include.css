@@ -1,0 +1,159 @@
+@charset "utf-8";
+
+/*헤더*/
+#header{}
+
+.hTop{
+    background: #282828;
+    font-size: 12px;/*text는상속됨*/
+    line-height: 40px; /*한꺼번에 위아래*/
+}
+
+.hTop a{
+    display: block;
+    color: #fff;  /*헤더탑안에있는 모든a태그 색 한꺼번에 변화*/
+    padding: 0 30px;  /*에 양옆에padding줘야 영역 균등하게 잡힘 . inlinkepadding위아래는 안되지만 양옆은ok*/
+    border-left: 1px solid #231f20;
+    
+}
+.engBtn{float: left;}
+.engBtn a{border-right: 1px solid #231f20;}
+
+.util{float: right;}
+.util li{float: left;}
+.util li a{}
+.util li img{margin-left: 5px;}/*li중 이미지하나니깐*/
+.util li:last-child a{ padding-right: 0;}  /*last-chlid위치,적용될곳 잘 선택.(아래gnb랑 맞추기위해서 줌)*/
+
+.hBottom{
+    line-height: 110px;
+}
+.hBottom h1{
+    width: 150px;
+    height: 80%; /*백그라운드라서 이렇게주고 center로 가운데정렬해줄수있다*/
+    float: left;
+    background: url(../images/common/logo.jpg)no-repeat center center;
+    text-indent: -9999px;
+    background-size: 100%; /*가로세로비율맞췄으니깐. cover랑 비슷*/
+}
+.hBottom h1 a{
+    display: block;
+}
+
+.gnb{
+    float: right;
+}
+.gnb li{
+    float: left;
+    padding-left: 50px;
+}
+.gnb li a{
+    display: block;
+    padding-top: 5px;
+}
+
+
+/*푸터*/
+#footer{
+    background: #1E1E1E;
+    position: relative; /*relative는 부모에게만줄수있기에fTop엔 불가능*/
+    color: #8c8c8c;
+    font-size: 12px; /*폰트사이즈통일*/
+}
+
+#footer a{color: #8c8c8c;}
+
+.topBtn{
+    width: 102px;
+    height: 39px; /*너비높이먼저 설정해주구*/
+    background: url(../images/common/btn_go_top.png)no-repeat;
+    position: absolute; /*얹힘*/
+    top: -39px; /*위로보내기*/
+    left: 50%; /*무조건 창기준 정중앙으로정렬. 중아에있는반원인데 width100%하믄 전체 영역 잡힘*/
+    margin-left: -51px; 
+}
+.topBtn a{
+    display: block;
+    height: 100%; /*전체맞춰놓고*/
+    padding-left: 30px; /*이경우 화살표때문에 완전 정중앙이아니므로 padding값으로 조절*/
+    padding-top: 12px;
+    font-size: 14px;
+    color: #646464;
+    box-sizing:border-box;
+}
+
+.fTop{
+    background: #282828;
+    padding: 50px 0;
+}
+.fTop dl{
+    float: left; 
+    margin-right: 80px;  /*가장넒은기준으로 여백잡힘*/
+    
+}
+.fTop dt{
+    color: #646464;
+    font-weight: bold;
+    background: url(../images/common/bar_snb.gif)no-repeat left bottom;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.fTop dd{
+
+    font-weight: 200;
+    line-height: 25px; 
+}
+.fTop dd a{}
+
+.fBottom{
+    padding: 50px 0;
+    position: relative; /*fBottom에 inner값바로먹혀있으니깐 여기에. fSns도  */
+
+}
+
+.fLogo{
+    width: 180px;
+    height: 30px; /*백그라운드로 주는거라 가로,세로 비율맞게 적어줘야한다*/
+    background: url(../images/common/logo_foot.gif)no-repeat center center;
+    background-size: 100%;/*이미지사이즈 주지않으면 그사이즈 그대로 출력하려는 성질있따*/
+    text-indent: -9999px;
+    margin-bottom: 20px;
+}
+
+.fInfo{overflow: hidden} /*cf일일이 주는거보다 부모에 overflow hiden하나주는게낫다*/
+.fInfo li{
+    float: left;
+
+}
+.fInfo li::after{
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background:#2d3333;
+    margin:0 5px;
+    vertical-align: top;  /*a다추가해서 중앙정렬하는거보다 이렇게주는게  한꺼번에*/
+    margin-top: 8px; /*순서 유의*/
+}
+.fInfo li:last-child::after{display: none;} /*background:none은 색깔만빠지고 영역은 살아있음*/
+
+.fInfo li a{
+    
+}
+
+.copy{
+    margin-top: 20px;
+}
+
+.fSns{
+    position: absolute; /*자식float했지만 부모absolute주면 cf안줘도됨*/
+    right: 0;
+    top: 50px;
+}
+.fSns li{float: left;}
+.fSns li a{}
+.fSns li a img{
+    width: 25px;
+    margin-left: 5px;
+}

@@ -1,0 +1,212 @@
+@charset "utf-8";
+
+
+/*메인슬라이더*/
+.mainSlider{
+    height: 650px; /*닫힌부모에게 이미지만큼 높이줘야함*/ 
+    position: relative; /*있어야 스크롤사라지고 기준점이됨*/
+    overflow: hidden; /*줘야 나중에스크롤생겼을때 안틀어짐*/
+    
+}
+.mainSlider img{
+    position: absolute; /*중앙정렬하기위해 뛰어야 */
+    left: 50%; /*이미지중앙정렬*/
+    margin-left:-960px;
+    
+}
+
+
+
+/*메인컨텐츠1*/
+.mainCon01{
+    background:#F5F5F5 url(../images/main/bg_bar_div.gif)no-repeat center center;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.mainCon01 span{display: block;}
+
+.mainCon01>div{
+    width: 330px;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top; /*위쪽기준으로 맞춤*/
+    padding: 0 50px;
+}
+
+.mainCon01 .con01Left{padding-left: 100px;}
+.con01Left h2{
+    font-size: 30px;
+    color: #711b04;
+    line-height: 35px;
+}
+.con01Left p{
+    font-size: 17px;
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+.con01Right{
+    font-size: 14px;
+    line-height: 24px;
+}
+.con01Right p{}
+.con01Right p span{}
+.moreBtn{
+    width: 40px;
+    height: 40px;
+    background: url(../images/main/btn_more02.png)no-repeat;
+    background-size: 100%; /*사진,width너비값달라서 짤림*/
+    text-indent: -9999px;
+    margin-top: 20px;
+}
+.moreBtn a{
+    display: block;
+    height: 100%;
+} 
+
+
+/*mainCon02*/
+.mainCon02{
+    background: url(../images/main/visual01.jpg)no-repeat center center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    color: #fff;
+    text-align: center;
+    background-attachment:fixed; /*백그라운드 cover랑같이줘야한다*/
+    background-size: cover; /**/
+    
+    
+}
+.mainCon02 h2{
+    font-weight: 600;
+    background: url(../images/main/tit_line_bot.png)no-repeat center bottom;
+    /*h2블락이라서0,0*/
+    font-size: 30px;
+    /*패딩,마진으로 한번에 둘다 여백줄수있따 .샌드위치식*/
+    padding-bottom: 15px;
+    margin-bottom: 14px;
+
+}
+.mainCon02 p{
+    font-size:12px;
+    font-weight: 200;
+}
+.mainCon02 .con02SubTit{
+    font-size: 14px;
+    font-weight:normal;
+    margin-bottom: 15px;
+}
+.mainCon02 p span{
+    display: block;
+}
+
+.mainCon02 .moreBtn{
+    /*가로세로값있어서 text-align:center안먹힘 margin으로 중앙정렬*/
+    margin: 0 auto;
+    margin-top: 50px;  /*순서중요.margin 0 auti 밑에적어줘야  먹힘*/
+    background-image: url(../images/main/btn_more.png); /* 위에꺼에서 이미지경로만바꿔주면ok  . background 아닌 background-image라서 여기에no-repat하면 안됨 . */
+    
+}
+.mainCon02 .moreBtn a{}
+
+/*mainCon03*/
+.mainCon03{
+    text-align: center;  /*이미지도중앙정렬되는이유는 wjscpsms*/
+    padding: 80px 0;
+}
+
+.con03Tit{}
+.con03Tit h2{color: #711b04;}
+.con03Tit p{
+    font-weight: 200;
+    margin: 20px 0;
+}
+
+.con03Menu{
+
+}
+.con03Menu li{
+    float: left;
+    position: relative;
+    margin-left: 3px; /*left로주면 첫번째자식 마진만 빼주면됨*/
+    margin-top: 3px;
+}
+.con03Menu li:first-child{margin-left: 0;} 
+.con03Menu li a{}
+.con03Menu li img{ 
+    display: block; /*img가 inline이라서 여백생김*/
+}
+
+.menuTit{
+    position: absolute; /*통쨰로띄움된다*/
+    bottom:20px;
+    width:100%; /*absolute글자 띄워서(영역만 따라올라온 케이크) 중앙정렬. 글자뛰워서 중앙정렬하는거랑,큰이미지 중앙정렬은 다르다.*/
+    font-size: 12px;
+}
+.menuTit h4{ 
+    color: #7d645a;
+    font-size: 16px;
+}
+.menuTit p{}
+
+/*mainCon04*/
+.mainCon04{
+    background-image:url(../images/main/visual02.jpg);
+    background-attachment:inherit;
+    padding:150px 0;
+}
+.mainCon04 .moreBtn{
+    width:280px;
+    background-image:url(../images/main/btn_find_store.png);
+}
+
+
+/*mainCon05*/
+.mainCon05{
+    background: #BEB4AF;
+    color: #fff;
+    text-align: center; /*textaing전체부모영역에줘야함 자식 span아닌*/
+    padding: 50px 0;
+    
+}
+.mainCon05 span{vertical-align: middle;} /*vertical-align은 (3개동시에)다 줘야중앙정렬됨 */
+.con05Tit{font-size: 25px;}
+.con05Txt{
+    font-size: 12px;
+    margin-left: 30px;
+    margin-right: 15px;
+    font-weight: 200;
+}
+.con05Btn{}
+.con05Btn a{}
+.con05Btn img{width: 40px;} /*span 아닌 img자체에 사이즈변경하면 바로바뀜*/
+
+
+/*mainCon06*/
+.mainCon06{
+    background: url(../images/main/bg_visual.jpg)no-repeat center center; /*백그라운드이미지안틀어지게center*/
+    background-size: cover; /*뒷 전체배경이기때문에 cover하는게 좋다*/
+    padding: 80px 0;
+}
+.mainCon06 ul{
+ 
+}
+.mainCon06 li{
+    width:25%; /*길이값없으면 틀어짐.  4덩어리라서대략 25%로줌*/
+    height: 150px;  /*height값있어야 float속성 빈공간있는대로 안붙음*/
+    float: left;
+    text-align: center;
+    padding:0 20px;
+    box-sizing: border-box; /* 25% 인데 20추가됫으니깐*/
+}
+.mainCon06 li h4{
+    font-size: 16px;
+    color: #7d645a;
+    line-height: 20px /*가운데정렬위해 img랑같은높이줌*/
+}
+.mainCon06 li h4 img{
+    width: 20px; /*가로값만바꿔줘도됨*/
+    vertical-align: top; /*img랑 제목 가운데정렬위해서 (부모에 line-height 20px잡혀있으므로)*/
+}
+.mainCon06 li p{font-size: 12px;}
